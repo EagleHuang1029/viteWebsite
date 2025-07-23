@@ -1,3 +1,89 @@
-.index-title {
-  font-size: 100px;
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Noto Sans TC", sans-serif;
+    text-decoration:none;
+    color: #212529; 
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+p,a{
+    font-family: "Noto Sans TC", sans-serif;
+    text-decoration:none;
+    color: #212529;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.05rem; 
+}
+
+img{
+    max-width:100%;
+    vertical-align: middle;
+}
+
+.ml-a{
+    margin-left: auto;
+}
+
+.mr-a{
+    margin-right: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
+}
+
+.container{
+    max-width: 1296px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+[class*="col"]{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.col-2{
+    width:16.666666%;
+}
+
+.col-3{
+    width:25%;
+}
+
+.col-4{
+    width:33.333333%;
+}
+
+.col-6{
+    width:50%;
+}
+
+.col-8{
+    width:66.666666%;
+}
+
+.col-10{
+    width: 83.333333%;
+}
+
+.col-12{
+    width: 100%;
 }

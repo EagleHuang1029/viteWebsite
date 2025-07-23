@@ -1,4 +1,53 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+header{
+  ul{
+    display: flex;
+    padding: 16px 0;
+
+    li{
+      &:nth-last-child(1){
+        a{
+          margin-right: 0px;
+        }
+      }
+
+      a{
+        display: inline-block;
+        padding: 12px 0;
+        margin-right: 40px;
+
+        &:hover{
+          color: gray;
+        }
+      }
+    }
+  }
+  .padding-0{
+    padding: 0;
+  }
+}
+
+
+.bi bi-person{
+    font-weight: 500;
+}
+
+.logo{
+    font-family: 'Mina', sans-serif;
+    font-size: 20px;
+    margin-right: 48px;
+    padding: 12px 0;
+    vertical-align: middle;
+    position: relative;
+    z-index: 2;
+}
+
+.dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 60%;
+    background-color: #c0fa73;
+    position: absolute;
+    right: -1px;
+    top: 12px;
+    z-index: -1;
 }
