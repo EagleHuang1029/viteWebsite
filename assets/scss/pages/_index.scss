@@ -41,49 +41,430 @@ img{
     flex-wrap: wrap;
 }
 
-.container{
-    max-width: 1296px;
-    margin: 0 auto;
-    padding-left: 12px;
-    padding-right: 12px;
+// .container{
+//     max-width: 1296px;
+//     margin: 0 auto;
+//     padding-left: 12px;
+//     padding-right: 12px;
+// }
+
+// .row{
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin-right: -12px;
+//     margin-left: -12px;
+// }
+
+// [class*="col"]{
+//     padding-left: 12px;
+//     padding-right: 12px;
+// }
+
+// .col-2{
+//     width:16.666666%;
+// }
+
+// .col-3{
+//     width:25%;
+// }
+
+// .col-4{
+//     width:33.333333%;
+// }
+
+// .col-6{
+//     width:50%;
+// }
+
+// .col-8{
+//     width:66.666666%;
+// }
+
+// .col-10{
+//     width: 83.333333%;
+// }
+
+// .col-12{
+//     width: 100%;
+// }
+
+@mixin pad {
+  @media(max-width: 768px){
+	@content;
+  }
 }
 
-.row{
+.banner{
+    background-image:url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner.png?raw=true") ;
+    background-size: cover;
+    padding-top: 288px;
+    padding-bottom: 288px;
+    @include pad{
+        background-image:url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-sm.png?raw=true");
+        padding:155px 24px;
+    }
+
+    .topic{
+        height: 223px;
+        margin-left: -115px;
+        @include pad{
+            height: 170px;
+            margin-left: 0px;
+        }
+
+        h1{
+            color: white;
+            font-size: 64px;
+            margin-bottom: 16px;
+            @include pad{
+                font-size: 48px;
+                margin-bottom: 8px;
+            }
+        }
+    
+        h3{
+            color: white;
+            font-size: 28px;
+            margin-bottom: 48px;
+            @include pad{
+                font-size: 20px;
+                margin-bottom: 32px;
+            }
+        }
+
+        .bannerBtn{
+            display: flex;
+
+            a{
+                background-color:#C0FA73 ;
+                padding: 12px 24px;
+                border-radius: 4px;
+                color: black;
+
+                &:hover{
+                    background-color:#8dc741 ;
+                }
+            }
+        }
+    }
+}
+
+.padding-lg{
+    padding-top: 64px;
+    padding-bottom: 48px;
+    @include pad{
+        padding: 40px 12px;
+    }
+
+}
+
+.newArrival{
+    text-align: center;
+
+    h2{
+        font-size: 48px;
+        margin-bottom: 32px;
+        @include pad{
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        span{
+            font-size: 32px;
+            @include pad{
+                 font-size: 24px;
+            }
+        }
+    }
+}
+
+.newProduct{
+    margin-bottom: 64px;
     display: flex;
-    flex-wrap: wrap;
-    margin-right: -12px;
-    margin-left: -12px;
+    justify-content: center;
+    
+    @include pad{
+        margin-bottom: 40px;
+    }
+
+    li{
+        margin-bottom: 40px;
+        @include pad{
+            margin-bottom: 24px;
+            margin-left: -6px;
+            margin-right: -6px;
+        }
+    }
+
+    img{
+        margin-bottom: 12px;
+    }
+    
+    h5{
+        font-size: 20px;
+        margin-bottom: 4px;
+        @include pad{
+           font-size: 16px; 
+        }
+    }
+
+    p{
+        font-size: 16px;
+    }
+
 }
 
-[class*="col"]{
-    padding-left: 12px;
-    padding-right: 12px;
+
+.hotRestock{
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include pad{
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .d-md-contents {
+                display: contents;
+            }
+
+         .overflow-x {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+           
+    }
+
+    h2{
+        font-size: 32px;
+        margin-bottom: 16px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        @include pad{
+            font-size: 24px;
+        }
+    }
+
+    li{
+        position: relative;
+        a{
+            &:before{
+                    display: block;
+                    content: "人氣No.1";
+                    color: #57A203;
+                    width: 91px;
+                    height: 37px;
+                    background-color: #F5FEE7;
+                    text-align: center;
+                    align-content: center;
+                    position: absolute;
+                }  
+        }
+    }
 }
 
-.col-2{
-    width:16.666666%;
+
+.saleArea{    
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-co-branded.png?raw=true");
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include pad{
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-co-branded-sm.png?raw=true");
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .content{
+        position: relative;
+        @include pad{
+            &:before{
+                content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/14f2133cdd6d831a3acb833025093d4fcbffc381/2025-week3-4/star.svg");
+                position: absolute;
+                left: -25%;
+                top: -12%;
+            }
+            &:after{
+                content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/14f2133cdd6d831a3acb833025093d4fcbffc381/2025-week3-4/sparkle.svg");
+                position: absolute;
+                right: -25%;
+                bottom: 0;
+            }
+        }
+    }
+    
+    h2{
+        color: white;
+        font-size: 48px;
+        margin-bottom: 32px;
+        @include pad{
+            font-size: 32px;
+        }
+        
+        .X{
+            font-size: 40px;
+            color: #C0FA73;
+            font-weight: 800;
+            margin-left: 16px;
+            margin-right: 16px;
+            @include pad{
+                font-size: 28px;
+            }
+        }
+
+        .h2-secondary{
+            font-size:32px ;
+             @include pad{
+                font-size: 20px;
+             }
+        }
+    }
+
+    h3{
+        color: #ADB5BD;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 48px;
+        @include pad{
+            font-size: 16px;
+        }
+    }
+
+    .button{
+        a{
+            padding: 12px 24px;
+            color: #212529;
+            background-color: #C0FA73;
+            border-radius: 4px;
+
+            &:hover{
+                background-color: #C0FA73;
+                color: #477A11;
+            }
+        }
+    }
+
+
 }
 
-.col-3{
-    width:25%;
+.seriesArea{
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include pad{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .container{
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+
+
+    h2{
+        font-size: 32px;
+        margin-bottom: 16px;
+        @include pad{
+            font-size: 24px;
+        }
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        li{
+            @include pad{
+                margin-bottom: 12px;
+                margin-left: -6px;
+                margin-right: -6px;
+                box-sizing: border-box;
+            }
+            a{
+                position: relative;
+                display: block;
+            }
+        }
+    }
 }
 
-.col-4{
-    width:33.333333%;
-}
-
-.col-6{
-    width:50%;
-}
-
-.col-8{
-    width:66.666666%;
-}
-
-.col-10{
-    width: 83.333333%;
-}
-
-.col-12{
+.mask{
+    background-color: #00000040;
+    position: absolute;
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &:hover{
+        background-color: #00000080;
+    }
+   
+
+    h3{
+        font-size: 28px;
+        color: white;
+        @include pad{
+            font-size: 16px;
+        }
+    }
+
+
+}
+
+.wearInspiration{
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-bottom: 48px;
+    @include pad{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 24px;
+    }
+
+    h2{
+        font-size: 32px;
+        margin-bottom: 16px;
+        @include pad{
+            font-size: 24px;
+        }
+    }
+
+    .column-gap-8 {
+        column-gap: 8px;
+    }
+
+    .row-gap-8 {
+        row-gap: 8px;
+    }
+
+    .column-md-gap-16{
+        @include pad{
+            column-gap: 16px;
+        }
+    }
+
+    .d-md-contents{
+        @include pad{
+            display: contents !important;
+        }
+    }
+
+    .overflow-md-auto {
+        @include pad{
+            overflow-x: auto;
+        }
+    }
+
+    img{
+        max-width: 100%;
+        min-width: 0;
+        display: block;
+        object-fit: cover;
+        @include pad{
+            width: 300px;
+            height: 300px;
+            min-width: auto;
+        }
+
+    }
+
 }
