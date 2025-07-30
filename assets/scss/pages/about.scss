@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@mixin pad {
+  @media(max-width: 768px){
+	@content;
+  }
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Noto Sans TC", sans-serif;
+    text-decoration:none;
+    color: #212529; 
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+p,a{
+    font-family: "Noto Sans TC", sans-serif;
+    text-decoration:none;
+    color: #212529;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.05rem; 
+}
+
+img{
+    max-width:100%;
+    vertical-align: middle;
+}
+
+.ml-a{
+    margin-left: auto;
+}
+
+.mr-a{
+    margin-right: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
+}
+
+.aboutBanner{
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week1/hero.png?raw=true");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 64px;
+    @include pad{
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/hero-sm.png?raw=true");
+        height: 240px;
+    }
+
+    h1{
+        font-size: 40px;
+        color: white;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        @include pad{
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+    }
+
+    h3{
+        font-size: 28px;
+        color: white;
+        font-weight: 700;
+        line-height: 1.2;
+        @include pad{
+            font-size: 20px;
+        }
+    }
+
+}
+
+
+.bannerPadding{
+       padding: 158px 0;
+       @include pad{
+            padding: 87px 0;
+       }
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.row{
+    display: flex;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.col-8{
+    width: 66.666666%;
+    @include pad{
+        width: 100%;
+    }
+}
+
+.col-10{
+    width: 83.333333%;
+    @include pad{
+        width: 100%;
+    }
+}
+
+
+
+.greenbg{
+    text-align: center;
+    background-color: #F5FEE7;
+    margin-bottom: 48px;
+    padding-top: 32px;
+    @include pad{
+        padding: 24px;
+        text-align: justify;
+    }
+
+    h3{
+        color: #57A203;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+
+    p{
+        font-weight: 400;
+        padding-bottom: 32px;
+        @include pad{
+            padding-bottom: 0px;
+        }
+    }
+}
+
+
+.brand{
+    display: block;
+    border-bottom: 1px solid #DEE2E6;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+
+    h2{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 5%;
+        margin-bottom: 24px;
+        @include pad{
+            font-size: 20px;
+        }
+    }
+
+    h3{
+        color: #57A203;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 5%;
+        margin-bottom: 16px;
+        @include pad{
+            font-size: 16px;
+        }
+    }
+
+    p{
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 5%;
+        color: #212529;
+    }
+
+    a{
+        display: block;
+        text-decoration: none;
+        margin-bottom: 16px;
+        font-weight: 500;
+        color:#57A203;
+        line-height: 1.5;
+        letter-spacing: 5%;
+
+        span{
+            margin-left: 6px;
+            border-bottom: 1px solid #57A203;
+        }
+    }
+}
+
+
+.brand ul li{
+    margin-left: 24px;
+    margin-bottom: 12px;
+    list-style-type: disc;
+
+    span{
+        border-right: 1px solid #000000;
+        padding-right: 8px;
+        margin-right: 8px;
+    }
+}
+
+
+.brand ol li {
+    margin-bottom: 12px;
+    list-style-type: none;
+    border-left: 3px solid #DEE2E6;
+    padding-left: 12px;
+    display: flex;
+
+    p{
+        align-items: center;
+    }
+}
+
+
+
+.pic{margin-bottom: 24px;}
+

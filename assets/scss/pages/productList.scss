@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@mixin pad {
+  @media(max-width: 768px){
+	@content;
+  }
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Noto Sans TC", sans-serif;
+    text-decoration:none;
+    color: #212529; 
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+p,a{
+    font-family: "Noto Sans TC", sans-serif;
+    text-decoration:none;
+    color: #212529;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.05rem; 
+}
+
+img{
+    max-width:100%;
+    vertical-align: middle;
+}
+
+.ml-a{
+    margin-left: auto;
+}
+
+.mr-a{
+    margin-right: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
+}
+
+.breadCrumb{
+    margin-bottom: 24px;
+}
+
+.breadCrumb1{
+    color: #6C757D;
+    margin-right: 12px;
+}
+
+.breadCrumb2{
+    color: #DEE2E6;
+    margin-right: 12px;
+}
+
+.title{
+    font-size:28px;
+    padding: 7px 0;
+    margin-bottom: 24px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+    @include pad{
+        margin-right: -6px;
+        margin-left: -6px;
+    }
+}
+
+.justify-content-spacebetween{
+    justify-content: space-between;
+}
+
+.mb-32{
+    margin-bottom: 32px;
+}
+
+[class*="col"]{
+    padding-left: 12px;
+    padding-right: 12px;
+    @include pad{
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+.col-2{
+    width:16.666666%;
+}
+
+.col-10{
+    width: 83.333333%;
+     @include pad{
+        width: 100%;
+     }
+}
+
+.display{
+    display: block;
+    @include pad{
+        display: none;
+    }
+}
+
+
+.menu{
+
+    li{
+        margin-bottom: 16px;
+    }
+
+    a{
+        display: block;
+        padding: 12px 0;
+        &:hover{
+           color: #8ed43e; 
+        }
+        &:focus{
+            color: #57A203;
+        }
+    }
+}
+
+
+
+
+.productList_Top{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4{
+    width: 33.333333%;
+    @include pad{
+        width: 50%;
+    }
+}
+
+.mb-48{
+    margin-bottom: 48px;
+    @include pad{
+        margin-bottom: 24px;
+    }
+}
+
+
+.productImg{
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.productList_Bot{
+    margin: 0 auto;
+
+    ul{
+        display: flex;
+        justify-content: center;
+
+        li{
+            a{
+                text-align: center;
+                display: block;
+                width: 40px;
+                padding: 8px 0;
+
+                &:hover{
+                    background-color:rgb(230, 230, 230) ;
+                }
+
+                &:focus{
+                    background-color:#C0FA73 ;
+                }
+            }
+        }
+    }
+}
+
+
+.opac40{
+    opacity: 40%;
+}

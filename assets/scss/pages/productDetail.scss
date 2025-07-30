@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@mixin pad {
+  @media(max-width: 768px){
+	@content;
+  }
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Noto Sans TC", sans-serif;
+    text-decoration:none;
+    color: #212529; 
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+p,a{
+    font-family: "Noto Sans TC", sans-serif;
+    text-decoration:none;
+    color: #212529;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.05rem; 
+}
+
+img{
+    max-width:100%;
+    vertical-align: middle;
+}
+
+.ml-a{
+    margin-left: auto;
+}
+
+.mr-a{
+    margin-right: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
+}
+
+.overflow-md-auto {
+        @include pad{
+            overflow-x: auto;
+        }
+    }
+
+.productTitle{
+    font-size:32px;
+    margin-bottom: 16px;
+}
+
+.priceArea{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    h5{
+        font-size: 20px;
+        color: #57A203;
+        margin-right: 8px;
+    }
+
+    p{
+        color: #ADB5BD;
+        font-weight: 400;
+        text-decoration:line-through;
+        font-size: 14px;
+    }
+}
+
+
+.productDetail{
+    margin-bottom: 32px;
+}
+
+.allColor{
+    width: 100%;
+    display: flex;
+}
+
+.productColor{
+    margin-bottom: 32px;
+
+    p{
+       margin-bottom: 8px; 
+    }
+}
+
+.Colorselect{
+    text-align: center;
+    width: 64px;
+    margin-right: 8px;
+    cursor: pointer;
+
+    img{
+       width: 100%; 
+    }
+}
+
+
+.Colorselect p{
+    color: #6C757D;
+}
+
+.productSize{
+    margin-bottom: 48px;
+}
+
+.allSize{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productSize >p{
+    margin-bottom: 8px;
+}
+
+.sizeBtn a{
+    display: block;
+    padding: 12px 24px;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 500;
+
+    &:hover{
+        background: black;
+        color: white;
+    }
+
+    &:focus{
+        border: 1px solid #212529;
+    }
+}
+
+.btnDisabled{
+    opacity: 40%;
+}
+
+.remainder{
+    color:#D74F4F ;
+    font-size: 14px;
+}
+
+.btnArea{
+    margin-bottom: 32px;
+    display: flex;
+
+    a{
+        display: block;
+        width: 49%;
+        text-align: center;
+        padding: 12px 0;
+        border: 1px solid #212529;
+        margin-right: 8px;
+        border-radius: 4px;
+        font-weight: 500; 
+
+        &:first-child:hover{
+            background: black;
+            color:white;
+        }
+    }
+}
+
+
+.reserve{
+    background: black;
+    color: white;
+
+    &:hover{
+        background: white;
+        color: black;
+    }
+}
+
+
+.btnArea a i{
+    margin-right: 8px;
+}
+
+.descriptionArea{
+    padding: 12px 0;
+    border-bottom: 1px solid #DEE2E6;
+
+    h6{
+        margin-bottom: 4px;
+        line-height: 1.5; 
+    }
+
+    p{
+        line-height: 1.5;
+        color: #6C757D; 
+    }
+}
+
+
+.title{
+    font-size:28px;
+    padding: 7px 0;
+    margin-bottom: 24px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.row_reverse{
+    flex-direction: row-reverse;
+}
+
+
+.mb-24{
+    margin-bottom: 24px;
+}
+
+.mb-32{
+    margin-bottom: 32px;
+}
+
+[class*="col"]{
+    padding-left: 12px;
+    padding-right: 12px;
+    @include pad{
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+.col-5{
+    width: 41.666666%;
+    @include pad{
+        width: 100%;
+    }
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-7{
+    width: 58.333333%;
+}
+
+
+.f-no-wrap{
+    flex-wrap:nowrap;
+}
+
+.padding0{
+    padding: 0;
+}
+
+.padding4{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.mr-8{
+    margin-bottom: 8px;
+}
+
+.menu a:hover{
+    color: #8ed43e;
+}
+
+.menu a:focus{
+    color: #57A203;
+}
+
+
+
+.detailImg{
+    width: 100%;
+}
+
+.content2{
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 48px 0;
+    @include pad{
+        margin-bottom: 24px;
+        padding: 40px 0;
+    }
+}
+
+.w25{
+    width: 25%;
+}
+
+
+
+.d-content{
+    display: contents;
+}
+
+.display-md-b{
+        display:none;
+        @include pad{
+           display: block; 
+        }
+    }
+
+
+
+
+.col-3{
+    @include pad{
+        width: auto;
+    }
+
+    a{
+        @include pad{
+           display: block;
+            width: 292px; 
+        }
+    }
+}
+   
+
+.display-md-n{
+    @include pad{
+        display: none !important;
+    }
+        
+}
+
+
+
+
+.productImg2{
+    width: 100%;
+    margin-bottom: 12px;
+}
