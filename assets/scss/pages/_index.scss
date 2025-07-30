@@ -191,8 +191,8 @@ img{
         margin-bottom: 40px;
         @include pad{
             margin-bottom: 24px;
-            margin-left: -6px;
-            margin-right: -6px;
+            margin-left: -3px;
+            margin-right: -3px;
         }
     }
 
@@ -286,7 +286,7 @@ img{
             &:after{
                 content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/14f2133cdd6d831a3acb833025093d4fcbffc381/2025-week3-4/sparkle.svg");
                 position: absolute;
-                right: -25%;
+                right: -15%;
                 bottom: 0;
             }
         }
@@ -373,8 +373,8 @@ img{
         li{
             @include pad{
                 margin-bottom: 12px;
-                margin-left: -6px;
-                margin-right: -6px;
+                margin-left: -3px;
+                margin-right: -3px;
                 box-sizing: border-box;
             }
             a{
@@ -428,7 +428,11 @@ img{
         }
     }
 
-    .column-gap-8 {
+    .flex-Column {
+        flex-direction: column;
+    }   
+
+    .Column-gap-8 {
         column-gap: 8px;
     }
 
@@ -436,7 +440,14 @@ img{
         row-gap: 8px;
     }
 
-    .column-md-gap-16{
+    .w-66{
+        width: 66%;
+    }
+    .w-33{
+        width: 33%;
+    }
+
+    .Column-md-gap-16{
         @include pad{
             column-gap: 16px;
         }

@@ -219,8 +219,7 @@ img{
 .row{
     display: flex;
     flex-wrap: wrap;
-    margin-right: -12px;
-    margin-left: -12px;
+
 }
 
 .row_reverse{
@@ -236,14 +235,6 @@ img{
     margin-bottom: 32px;
 }
 
-[class*="col"]{
-    padding-left: 12px;
-    padding-right: 12px;
-    @include pad{
-        padding-left: 6px;
-        padding-right: 6px;
-    }
-}
 
 .col-5{
     width: 41.666666%;
@@ -252,9 +243,7 @@ img{
     }
 }
 
-.col-6{
-    width: 50%;
-}
+
 
 .col-7{
     width: 58.333333%;
