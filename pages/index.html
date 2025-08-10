@@ -9,13 +9,14 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <%- include('./layout/header'); -%>
     
       <section class="banner">
         <div class="container">
-          <div class="topic">
+          <div class="topic" data-aos="fade-down" data-aos-delay="500">
             <h1>URBNSTEP</h1>
             <h3>Your Step, Your Statement</h3>
             <div class="bannerBtn"><a href="#">立即選購</a></div>
@@ -24,13 +25,13 @@
       </section>
 
       <section class="container padding-lg">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <div class="col-12 newArrival">
             <h2>New Arrival<br> <span>新品上市</span> </h2>
           </div>
         </div>
 
-        <ul class="row newProduct">
+        <ul class="row newProduct"  data-aos="fade-up">
           <li class="col-6 proCard">
             <a href="#">
               <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/new-1.png?raw=true" alt="白色褲子配白鞋">
@@ -61,7 +62,7 @@
           </li>
         </ul>
 
-         <section class="row hotRestock">
+         <section class="row hotRestock" data-aos="fade-up" data-aos-delay="300">
             <h2>熱銷補貨</h2>
             <ul class="row overflow-x">
               <li class="col-lg-3">
@@ -105,7 +106,7 @@
         </div>
       </section>
 
-      <section class="seriesArea">
+      <section class="seriesArea" data-aos="zoom-in-right">
         <div class="container">
           <h2>依系列選購</h2>
           <ul class="row">
@@ -150,7 +151,7 @@
         </div>
       </section>
 
-      <section class="wearInspiration">
+      <section class="wearInspiration"  data-aos="zoom-in-left">
         <div class="container">
           <h2>依系列選購</h2>
           <div class="d-flex Column-gap-8 overflow-md-auto">
@@ -196,5 +197,9 @@
 
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
   </body>
 </html>
